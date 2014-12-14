@@ -1,0 +1,33 @@
+<section class="offset-30 clearfix">
+    <form class="form-horizontal" role="form">
+        <div class="form-group">
+            <p class="bottom-offset-small">Please enter your email and password to create a new account below.</p>
+            <div data-ng-hide="message == ''" class="alert alert-danger">
+                <button data-dismiss="alert" class="close" type="button">×</button>
+                <strong>{{message}}</strong>
+            </div>
+            <label for="inputUsername" class="col-sm-4 control-label">Username</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" id="inputUsername" placeholder="Username" ng-model="register.Email">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputPassword" class="col-sm-4 control-label">Password</label>
+            <div class="col-sm-4">
+                <input type="password" class="form-control" id="inputPassword" placeholder="Password" ng-model="register.Password">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputPasswordConfirmation" class="col-sm-4 control-label">Password Confirmation</label>
+            <div class="col-sm-4">
+                <input type="password" class="form-control" id="inputPasswordConfirmation" placeholder="Password" ng-model="register.ConfirmPassword">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-4 col-sm-4">
+                <button type="submit" class="btn btn-lg btn-primary btn-block" ng-click="register(register.Email, register.Password, register.ConfirmPassword)">Register</button>
+            </div>
+        </div>
+    </form>
+</section>
+
